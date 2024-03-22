@@ -1,0 +1,31 @@
+<!-- Start Hero Section -->
+<div class="card">
+   <img src="/assets/images/240_F_378724939_vP6KBpciPuY3f3NoEQRKWTDSBzpK0aDl.jpg"  style="width:100%;" >
+   <div class="centered" >CATEGORY</div>
+</div>
+<!-- End Hero Section -->
+
+
+
+<!-- Start Why Choose Us Section -->
+<div class="why-choose-section">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-lg-12 mx-auto row">
+                
+                <div class="col-md-4 mb-4"  *ngFor="let data of alluser">
+                    <div class="card">
+                      <img [src]="getimg(data?.image)" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title"> <a [routerLink]="['/customerlayout/category',data._id]" class="btn">{{data.categoryName}}</a></h5>
+                      </div>
+                    </div>
+                   
+                  </div>
+            </div>
+            
+        </div>
+
+    </div>
+</div>

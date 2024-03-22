@@ -1,0 +1,66 @@
+<div class="hero">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-5">
+                <div class="intro-excerpt">
+                    <h1 class="text-center">Add product</h1>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="hero-img-wrap">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="why-choose-section">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-md-6 mx-auto">
+                <form  [formGroup]="AddproductForm" (submit)="submit()">
+                    <div class="mb-3">
+                        <label for="exampleInputproducttitle" class="fw-bold"> Product Title</label><br>
+                        <input type="text" class="form-control" formControlName="productTitle">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputprice" class="fw-bold"> Price</label><br>
+                        <input type="text" class="form-control" formControlName="Price">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputquantity" class="fw-bold">Quantity</label><br>
+                        <input type="text" class="form-control" formControlName="Quantity">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputdescription" class="fw-bold">Description</label><br>
+                        <input type="text" class="form-control" formControlName="Description">
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Category</label>
+                       
+                       '' <ng-select formControlName="categoryId">
+                            <ng-option *ngFor="let category of allcategory"
+                                [value]="category._id">{{category.categoryName}}</ng-option>
+                        </ng-select>
+                    </div>
+                    <div class="mb-3">
+                        <label>subCategory</label>
+                        <ng-select formControlName="subcategoryId">
+                            <ng-option *ngFor="let subcategory of allsubcategory"
+                                [value]="subcategory._id">{{subcategory.subcategoryName}}</ng-option>
+                        </ng-select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="myfile">logo:</label>
+                        <input type="file" id="myfile" class="form-control"(change)="fileupload($event)">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary  ">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

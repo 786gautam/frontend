@@ -1,0 +1,65 @@
+<!-- Start Hero Section -->
+<div class="hero">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-5">
+                <div class="intro-excerpt">
+                    <h1 class="text-center">Register</h1>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="hero-img-wrap">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <!-- Start Why Choose Us Section -->
+  <div class="why-choose-section">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-md-6 mx-auto">
+          <form [formGroup]="addForm" (submit)="submit()">
+
+            <div class="mb-3">
+              <label for="exampleInputname1" class="fw-bold">Name </label><br>
+              <input type="name" class="form-control" formControlName="name" id="exampleInputname1" aria-describedby="nameHelp">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="fw-bold">Email address</label><br>
+                <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1 " class="fw-bold">password</label><br>
+              <input class=" form-control" type="password" formControlName="password" id="exampleInputPassword1">
+            </div>
+            
+            <div class="mb-3">
+              <label for="exampleInputaddress" class="fw-bold">address</label><br>
+              <input type="address" class="form-control" formControlName="address" id="exampleInputaddress" aria-describedby="addressHelp">
+              </div>
+            <div class="mb-3   ">
+                <label for="exampleInputphone1 " class="fw-bold">contact</label><br>
+                <input class=" form-control" type="phone" formControlName="contact" id="exampleInputphone1">
+            
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputpincode" class="fw-bold">pincode</label><br>
+              <input type="pincode" class="form-control" formControlName="pincode" id="exampleInputpincode" aria-describedby="pincodeHelp">
+              </div>
+              <div class="mb-3">
+                <label for="myfile">image</label>
+                <input type="file" id="myfile" class="form-control" (change)="fileupload($event)">
+            </div>
+
+            <button type="submit" class="btn btn-primary  ">Submit</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- End Why Choose Us Section -->

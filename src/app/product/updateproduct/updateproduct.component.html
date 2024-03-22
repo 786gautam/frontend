@@ -1,0 +1,80 @@
+<div class="hero">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-5">
+                <div class="intro-excerpt">
+                    <h1 class="text-center">Update product</h1>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="hero-img-wrap">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="why-choose-section"><section class="section speakers white">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 mx-auto">
+				<form [formGroup]="addform" (submit)="submit()">
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" formControlName="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="email" class="form-control" formControlName="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input type="password" class="form-control" formControlName="password">
+                    </div>
+                    <button class="btn btn-primary mx-auto d-block" type="submit">Update</button>
+                </form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-====  End of Speakers  ====-->
+
+<!--==============================================
+=            Call to Action Subscribe            =
+===============================================-->
+
+
+<div class="container">
+    <div class="row justify-content-between align-items-center">
+        <div class="col-md-6 mx-auto">
+            <form [formGroup]="addform" (submit)="submit()">
+
+                <div class="mb-3">
+                    <label class="fw-bold">Category</label>
+
+                    <ng-select formControlName="categoryId">
+                        <ng-option *ngFor="let category of allcategory"
+                            [value]="category._id">{{category.categoryName}}</ng-option>
+                    </ng-select>
+                    <label class="fw-bold">subCategory</label>
+                    <ng-select formControlName="subcategoryId">
+                        <ng-option *ngFor="let subcategory of allsubcategory"
+                            [value]="subcategory._id">{{subcategory.subcategoryName}}</ng-option>
+                    </ng-select>
+                    <label for="exampleInputproducttitle" class="fw-bold">productTitle</label><br>
+                    <input type="text" class="form-control" formControlName="productTitle"><br>
+                    <label for="exampleInputprice" class="fw-bold">Price</label>
+                    <input type="text" class="form-control" formControlName="Price">
+                    <label for="exampleInputquantity" class="fw-bold">Quantity</label><br>
+                    <input type="text" class="form-control" formControlName="Quantity">
+                    <label for="myfile">image</label>
+                    <input type="file" id="myfile" class="form-control" (change)="fileupload($event)">
+                    <label for="exampleInputdescription" class="fw-bold">Description</label>
+                    <input type="text" class="form-control" formControlName="Description">
+                    <button type="submit" class="btn btn-primary  my-4 ">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
